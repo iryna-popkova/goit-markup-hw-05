@@ -59,15 +59,23 @@ body {
   font-style: normal;
 }
 
-.link-navigation.current::after {
+.link-navigation::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
+  transform: scaleX(0);
+  transition: transform 250ms linear;
   width: 100%;
   height: 4px;
   background: #404bbf;
   border-radius: 2px;
+}
+
+.link-navigation:hover:after,
+.link-navigation:focus:after,
+.link-navigation.current:after {
+  transform: scaleX(1);
 }
 
 .link-navigation:hover:hover,
