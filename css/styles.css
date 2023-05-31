@@ -15,7 +15,6 @@ body {
   color: var(--primary-text-color);
   background-color: var(--standart-color);
   font-family: "Roboto", sans-serif;
-  padding-bottom: 72px;
 }
 
 /* logo style */
@@ -129,10 +128,6 @@ body {
 }
 
 .page-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid var(--border-color);
