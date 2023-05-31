@@ -57,7 +57,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-style: normal;
-  transition: background-color 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-navigation::after {
@@ -66,7 +66,7 @@ body {
   bottom: 0;
   left: 0;
   transform: scaleX(0);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   height: 4px;
   background: #404bbf;
@@ -106,7 +106,7 @@ body {
   line-height: 1.5;
   text-decoration: none;
   letter-spacing: 0.02em;
-  transition: background-color 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts:hover,
 .link-contacts:focus {
@@ -382,7 +382,7 @@ body {
   fill: var(--standart-color);
   background-color: #4d5ae5;
   border-radius: 50%;
-  transition: background-color 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-ref-team:hover,
@@ -401,7 +401,7 @@ body {
 
 .customer-icon {
   fill: currentColor;
-  transition: fill 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-ref:hover,
 .customer-ref:focus {
@@ -427,7 +427,8 @@ body {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
-  transition: color 250ms linear, border 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer */
@@ -516,7 +517,7 @@ body {
   border-radius: 50%;
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-ref:hover,
 .social-ref:focus {
@@ -549,7 +550,7 @@ body {
   height: 56px;
   border: none;
   box-shadow: 0px 4px 4px 0px #00000026;
-  transition: background-color 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.order:hover,
 .button.order:focus {
@@ -570,7 +571,8 @@ body {
   color: var(--accent-color);
   background-color: var(--additional-color);
   border: 1px solid var(--border-color);
-  transition: background-color 250ms linear, box-shadow 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.primary:hover,
 .button.primary:focus {
@@ -616,7 +618,7 @@ body {
 }
 .portfolio-ref {
   display: block;
-  transition: box-shadow 250ms linear;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-ref:hover,
 .portfolio-ref:focus {
@@ -697,7 +699,8 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 24px 24px 544px 360px;
-  transition: background-color 250ms linear, fill 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close:hover,
