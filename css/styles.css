@@ -57,6 +57,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-style: normal;
+  transition: background-color 250ms linear;
 }
 
 .link-navigation::after {
@@ -105,6 +106,7 @@ body {
   line-height: 1.5;
   text-decoration: none;
   letter-spacing: 0.02em;
+  transition: background-color 250ms linear;
 }
 .link-contacts:hover,
 .link-contacts:focus {
@@ -131,7 +133,6 @@ body {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid var(--border-color);
-  background-color: var(--standart-color);
 }
 
 .header-navigation {
@@ -381,6 +382,7 @@ body {
   fill: var(--standart-color);
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition: background-color 250ms linear;
 }
 
 .social-ref-team:hover,
@@ -399,6 +401,7 @@ body {
 
 .customer-icon {
   fill: currentColor;
+  transition: fill 250ms linear;
 }
 .customer-ref:hover,
 .customer-ref:focus {
@@ -424,6 +427,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
+  transition: color 250ms linear, border 250ms linear;
 }
 
 /* footer */
@@ -510,6 +514,9 @@ body {
   fill: var(--standart-color);
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
 }
 .social-ref:hover,
 .social-ref:focus {
@@ -542,6 +549,7 @@ body {
   height: 56px;
   border: none;
   box-shadow: 0px 4px 4px 0px #00000026;
+  transition: background-color 250ms linear;
 }
 .button.order:hover,
 .button.order:focus {
@@ -562,6 +570,7 @@ body {
   color: var(--accent-color);
   background-color: var(--additional-color);
   border: 1px solid var(--border-color);
+  transition: background-color 250ms linear, box-shadow 250ms linear;
 }
 .button.primary:hover,
 .button.primary:focus {
@@ -607,6 +616,7 @@ body {
 }
 .portfolio-ref {
   display: block;
+  transition: box-shadow 250ms linear;
 }
 .portfolio-ref:hover,
 .portfolio-ref:focus {
