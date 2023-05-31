@@ -697,6 +697,13 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 24px 24px 544px 360px;
+  transition: background-color 250ms linear, fill 250ms linear;
+}
+
+.button-close:hover,
+.button-close:focus {
+  background-color: var(--focus-color);
+  fill: var(--standart-color);
 }
 .backdrop.is-hidden {
   opacity: 0;
