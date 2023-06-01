@@ -57,13 +57,13 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-style: normal;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-navigation::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   transform: scaleX(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,7 +106,7 @@ body {
   line-height: 1.5;
   text-decoration: none;
   letter-spacing: 0.02em;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts:hover,
 .link-contacts:focus {
@@ -427,8 +427,8 @@ body {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer */
@@ -571,7 +571,9 @@ body {
   color: var(--accent-color);
   background-color: var(--additional-color);
   border: 1px solid var(--border-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.primary:hover,
@@ -626,6 +628,11 @@ body {
     0px 1px 6px 0px #2e2f4214;
 }
 
+.portfolio-ref:hover.overlay-text,
+.portfolio-ref:focus.overlay-text {
+  transform: translateY(0);
+}
+
 .portfolio-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -638,6 +645,31 @@ body {
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   padding: 32px 16px;
+}
+
+/* overlay portfolio-image */
+
+.portfolio-image {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.overlay-text {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  margin: 0;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* main containers and sections */
@@ -690,23 +722,32 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   background-color: #e7e9fc;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 24px 24px 544px 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close:hover,
 .button-close:focus {
   background-color: var(--focus-color);
   fill: var(--standart-color);
+  border: none;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -714,27 +755,6 @@ img {
   visibility: hidden;
 }
 
-/* overlay portfolio-image */
-
-.portfolio-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio-image::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-image:hover.portfolio-image::before,
-.portfolio-image:focus.portfolio-image::before {
-  transform: translateY(0);
+.button-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
